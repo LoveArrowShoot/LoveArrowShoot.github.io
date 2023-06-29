@@ -16,7 +16,7 @@
         <id>http://example.com/2023/06/30/cpp/C++11%E7%89%B9%E8%89%B2/</id>
         <title>C++11特色</title>
         <link rel="alternate" href="http://example.com/2023/06/30/cpp/C++11%E7%89%B9%E8%89%B2/"/>
-        <content type="html">&lt;p&gt;右值引用&lt;/p&gt;
+        <content type="html">&lt;h2 id=&#34;右值引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#右值引用&#34;&gt;#&lt;/a&gt; 右值引用&lt;/h2&gt;
 &lt;h3 id=&#34;万能引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#万能引用&#34;&gt;#&lt;/a&gt; 万能引用&lt;/h3&gt;
 &lt;p&gt;根据传入变量的类型决定是左 / 右值引用&lt;/p&gt;
 &lt;p&gt;常见场景   函数模板的参数 T&amp;amp;&amp;amp;   auto &amp;amp;&amp;amp;&lt;/p&gt;

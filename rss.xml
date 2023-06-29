@@ -22,7 +22,7 @@
             <category term="C++" scheme="http://example.com/categories/cpp/" />
             <category term="C++" scheme="http://example.com/tags/C/" />
             <pubDate>Fri, 30 Jun 2023 00:07:23 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;右值引用&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;右值引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#右值引用&#34;&gt;#&lt;/a&gt; 右值引用&lt;/h2&gt;
 &lt;h3 id=&#34;万能引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#万能引用&#34;&gt;#&lt;/a&gt; 万能引用&lt;/h3&gt;
 &lt;p&gt;根据传入变量的类型决定是左 / 右值引用&lt;/p&gt;
 &lt;p&gt;常见场景   函数模板的参数 T&amp;amp;&amp;amp;   auto &amp;amp;&amp;amp;&lt;/p&gt;
