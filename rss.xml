@@ -3,24 +3,473 @@
     <channel>
         <title></title>
         <subtitle>❤Love Arrow Shoot!❤</subtitle>
-        <icon>http://example.com/images/favicon.ico</icon>
-        <link>http://example.com</link>
+        <icon>http://lovearrowshoot.github.io/images/favicon.ico</icon>
+        <link>http://LoveArrowShoot.github.io</link>
         <author>
           <name>Umi</name>
         </author>
         <description>这只是我闲着无聊搭的一个博客，主要用于存放笔记，顺便厨力放出</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 30 Jun 2023 00:07:23 +0800</pubDate>
-        <lastBuildDate>Fri, 30 Jun 2023 00:07:23 +0800</lastBuildDate>
+        <pubDate>Fri, 30 Jun 2023 10:29:20 +0800</pubDate>
+        <lastBuildDate>Fri, 30 Jun 2023 10:29:20 +0800</lastBuildDate>
         <category term="umi" />
         <category term="C++" />
         <category term="CS" />
         <item>
-            <guid isPermalink="true">http://example.com/2023/06/30/cpp/C++11%E7%89%B9%E8%89%B2/</guid>
+            <guid isPermalink="true">http://lovearrowshoot.github.io/CS/OS/</guid>
+            <title>操作系统</title>
+            <link>http://lovearrowshoot.github.io/CS/OS/</link>
+            <category term="CS" scheme="http://lovearrowshoot.github.io/categories/CS/" />
+            <category term="CS" scheme="http://lovearrowshoot.github.io/tags/CS/" />
+            <pubDate>Fri, 30 Jun 2023 10:29:20 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;概览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概览&#34;&gt;#&lt;/a&gt; 概览&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;操作系统（Operating System，简称 OS）是管理计算机硬件与软件资源的程序，是计算机的基石。&lt;/li&gt;
+&lt;li&gt;操作系统本质上是一个运行在计算机上的软件程序 ，用于管理计算机硬件和软件资源。&lt;/li&gt;
+&lt;li&gt;操作系统存在屏蔽了硬件层的复杂性。 操作系统就像是硬件使用的负责人，统筹着各种相关事项。&lt;/li&gt;
+&lt;li&gt;操作系统的内核（Kernel）是操作系统的核心部分，它负责系统的内存管理，硬件设备的管理，文件系统的管理以及应用程序的管理。 内核是连接应用程序和硬件的桥梁，决定着系统的性能和稳定性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;系统调用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#系统调用&#34;&gt;#&lt;/a&gt; 系统调用&lt;/h2&gt;
+&lt;p&gt;根据进程访问资源的特点，我们可以把进程在系统上的运行分为两个级别：&lt;/p&gt;
+&lt;p&gt;用户态 (user mode) : 用户态运行的进程可以直接读取用户程序的数据。&lt;/p&gt;
+&lt;p&gt;系统态 (kernel mode): 可以简单的理解系统态运行的进程或程序几乎可以访问计算机的任何资源，不受限制。&lt;/p&gt;
+&lt;p&gt;我们运行的程序基本都是运行在用户态，也就是说在我们运行的用户程序中，凡是与系统态级别的资源有关的操作（如文件管理、进程控制、内存管理等)，都必须通过系统调用方式向操作系统提出服务请求，并由操作系统代为完成。这些系统调用按功能大致可分为如下几类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设备管理。完成设备的请求或释放，以及设备启动等功能。&lt;/li&gt;
+&lt;li&gt;文件管理。完成文件的读、写、创建及删除等功能。&lt;/li&gt;
+&lt;li&gt;进程控制。完成进程的创建、撤销、阻塞及唤醒等功能。&lt;/li&gt;
+&lt;li&gt;进程通信。完成进程之间的消息传递或信号传递等功能。&lt;/li&gt;
+&lt;li&gt;内存管理。完成内存的分配、回收以及获取作业占用内存区大小及地址等功能。&lt;/li&gt;
+&lt;li&gt;&lt;img data-src=&#34;452eaa10218c49e03390896987bbe9fd.png&#34; alt=&#34;截图&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;硬件结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#硬件结构&#34;&gt;#&lt;/a&gt; 硬件结构&lt;/h2&gt;
+&lt;h3 id=&#34;冯诺依曼模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#冯诺依曼模型&#34;&gt;#&lt;/a&gt; 冯诺依曼模型&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;641e410538abd5e3ea7febb846abfe15.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;存储器层次关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#存储器层次关系&#34;&gt;#&lt;/a&gt; 存储器层次关系&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;7e690ef1763726a91b5ac07c2f8e93cf.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;内存管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存管理&#34;&gt;#&lt;/a&gt; 内存管理&lt;/h1&gt;
+&lt;h2 id=&#34;虚拟内存&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#虚拟内存&#34;&gt;#&lt;/a&gt; 虚拟内存&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;虚拟内存可以使得进程对运行内存超过物理内存大小，因为程序运行符合局部性原理，CPU 访问内存会有很明显的重复访问的倾向性，对于那些没有被经常使用到的内存，我们可以把它换出到物理内存之外，比如硬盘上的 swap 区域。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;由于每个进程都有自己的页表，所以每个进程的虚拟内存空间就是相互独立的。进程也没有办法访问其他进程的页表，所以这些页表是私有的，这就解决了多进程之间地址冲突的问题。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;页表里的页表项中除了物理地址之外，还有一些标记属性的比特，比如控制一个页的读写权限，标记该页是否存在等。在内存访问方面，操作系统提供了更好的安全性。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;内存分页&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存分页&#34;&gt;#&lt;/a&gt; 内存分页&lt;/h2&gt;
+&lt;p&gt;在 Linux 下，每一页的大小为 4KB&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;b1c9ab095015145af4e420d401f5e10e.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;内存分段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存分段&#34;&gt;#&lt;/a&gt; 内存分段&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;505f014934e8bd3730a53baf3da58d3c.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;段页式内存&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#段页式内存&#34;&gt;#&lt;/a&gt; 段页式内存&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;ab1468bc9813d44902b131553259f04c.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;linux内存&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#linux内存&#34;&gt;#&lt;/a&gt; Linux 内存&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;1747399eeb06fb7901de17323539b8b5.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;虽然每个进程都各自有独立的虚拟内存，但是每个虚拟内存中的内核地址，其实关联的都是相同的物理内存。这样，进程切换到内核态后，就可以很方便地访问内核空间内存&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;feda7e0fd68f52a80f47a2e0b7a80cdc.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码段，包括二进制可执行代码；&lt;/li&gt;
+&lt;li&gt;数据段，包括已初始化的静态常量和全局变量；&lt;/li&gt;
+&lt;li&gt;BSS 段，包括未初始化的静态变量和全局变量；&lt;/li&gt;
+&lt;li&gt;堆段，包括动态分配的内存，从低地址开始向上增长；&lt;/li&gt;
+&lt;li&gt;文件映射段，包括动态库、共享内存等，从低地址开始向上增长&lt;/li&gt;
+&lt;li&gt;栈段，包括局部变量和函数调用的上下文等。栈的大小固定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;内存回收&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存回收&#34;&gt;#&lt;/a&gt; 内存回收&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;d422671507c85bc8f23b03eb9f88166e.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;页面置换算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#页面置换算法&#34;&gt;#&lt;/a&gt; 页面置换算法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Clock 页面置换算法（时钟页面置换算法）把所有的页面都保存在一个环形链表中，表针指向最老的页面。当发生缺页中断时，算法检查表针指向的页面：如果访问位是 1 就清除访问位，并把表针前移一个位置，重复这个过程直到找到了一个访问位为 0 的页面为止；然后将该页面淘汰，插入新页面&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;OPT 页面置换算法（最佳页面置换算法） ：最佳 (Optimal, OPT) 置换算法所选择的被淘汰页面将是以后永不使用的，或者是在最长时间内不再被访问的页面，这样可以保证获得最低的缺页率。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;FIFO 页面置换算法（先进先出页面置换算法） : 总是淘汰最先进入内存的页面，即选择在内存中驻留时间最久的页面进行淘汰。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LRU 页面置换算法（最近最久未使用页面置换算法） ：LRU 算法赋予每个页面一个访问字段，用来记录一个页面自上次被访问以来所经历的时间 T，当须淘汰一个页面时，选择现有页面中其 T 值最大的，即最近最久未使用的页面予以淘汰。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LFU 页面置换算法（最少使用页面置换算法） : 该置换算法选择在之前时期使用最少的页面作为淘汰页。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;lru算法改进&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lru算法改进&#34;&gt;#&lt;/a&gt; LRU 算法改进&lt;/h2&gt;
+&lt;p&gt;传统的 LRU 算法无法避免下面这两个问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;预读失效导致缓存命中率下降&lt;br /&gt;
+缓存污染导致缓存命中率下降&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;为了避免「预读失效」造成的影响&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Linux 操作系统实现两个了 LRU 链表：活跃 LRU 链表和非活跃 LRU 链表&lt;/p&gt;
+&lt;p&gt;MySQL Innodb 存储引擎是一个 LRU 链表上划分来 2 个区域：young 区域 和 old 区域。&lt;/p&gt;
+&lt;p&gt;预读页就只需要加入到非活跃链表头部，当页被真正访问的时候，才将页插入活跃链表头部，而将尾部的页降级为非活跃链表头部；如果预读的页一直没有被访问，就会从非活跃链表移除，这样就不会影响活跃链表中的热点数据。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为了避免「缓存污染」造成的影响，提高了升级为热点数据的门槛：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Linux 操作系统：在内存页被访问第二次的时候，将页从非活跃链表升级到活跃链表&lt;/p&gt;
+&lt;p&gt;MySQL Innodb：在内存页被访问第二次的时候，进行停留在 old 区域的时间判断：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;如果第二次的访问时间与第一次访问的时间在 1 秒内（默认值），那么该页就不会被从 old 区域升级到 young 区域&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果第二次的访问时间与第一次访问的时间超过 1 秒，那么该页就会从 old 区域升级到 young 区域&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;进程管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程管理&#34;&gt;#&lt;/a&gt; 进程管理&lt;/h1&gt;
+&lt;h2 id=&#34;进程和线程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程和线程&#34;&gt;#&lt;/a&gt; 进程和线程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;进程是资源（包括内存、打开的文件等）分配的单位，线程是 CPU 调度的单位；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进程拥有一个完整的资源平台，而线程只独享必不可少的资源，如寄存器和栈；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线程同样具有就绪、阻塞、执行三种基本状态，同样具有状态之间的转换关系；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线程能减少并发执行的时间和空间开销；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线程的创建时间比进程快，因为进程在创建的过程中，还需要资源管理信息，比如内存管理信息、文件管理信息，而线程在创建的过程中，不会涉及这些资源管理信息，而是共享它们；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线程的终止时间比进程快，因为线程释放的资源相比进程少很多；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同一个进程内的线程切换比进程切换快，因为线程具有相同的地址空间（虚拟内存共享），这意味着同一个进程的线程都具有同一个页表，那么在切换的时候不需要切换页表。而对于进程之间的切换，切换的时候要把页表给切换掉，而页表的切换过程开销是比较大的；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于同一进程的各线程间共享内存和文件资源，那么在线程之间数据传递的时候，就不需要经过内核了，这就使得线程之间的数据交互效率更高了；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程状态&#34;&gt;#&lt;/a&gt; 进程状态&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;cc43f19d22fc56c1a3b852670cc83372.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;运行状态（Running）：该时刻进程占用 CPU；&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;就绪状态（Ready）：可运行，由于其他进程处于运行状态而暂时停止运行；&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;阻塞状态（Blocked）：该进程正在等待某一事件发生（如等待输入 / 输出操作的完成）而暂时停止运行，这时，即使给它 CPU 控制权，它也无法运行；&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创建状态（new）：进程正在被创建时的状态；&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结束状态（Exit）：进程正在从系统中消失时的状态；&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;阻塞挂起状态：进程在外存（硬盘）并等待某个事件的出现；&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;就绪挂起状态：进程在外存（硬盘），但只要进入内存，即刻立刻运行；&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程控制&#34;&gt;#&lt;/a&gt; 进程控制&lt;/h2&gt;
+&lt;h3 id=&#34;pcb进程控制块&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pcb进程控制块&#34;&gt;#&lt;/a&gt; PCB（进程控制块）&lt;/h3&gt;
+&lt;p&gt;PCB 是进程存在的唯一标识&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;进程描述信息：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 进程标识符：标识各个进程，每个进程都有一个并且唯一的标识符；
+
+ 用户标识符：进程归属的用户，用户标识符主要为共享和保护服务；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进程控制和管理信息：&lt;/p&gt;
+&lt;p&gt;进程当前状态，如 new、ready、running、waiting 或 blocked 等；&lt;/p&gt;
+&lt;p&gt;进程优先级：进程抢占 CPU 时的优先级；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;资源分配清单：有关内存地址空间或虚拟地址空间的信息，所打开文件的列表和所使用的 I/O 设备信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CPU 相关信息：CPU 中各个寄存器的值，当进程被切换时，CPU 的状态信息都会被保存在相应的 PCB 中，以便进程重新执行时，能从断点处继续执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程调度算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程调度算法&#34;&gt;#&lt;/a&gt; 进程调度算法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;先到先服务 (FCFS) 调度算法：从就绪队列中选择一个最先进入该队列的进程为之分配资源，使它立即执行并一直执行到完成或发生某事件而被阻塞放弃占用 CPU 时再重新调度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;短作业优先 (SJF) 调度算法：从就绪队列中选出一个估计运行时间最短的进程为之分配资源，使它立即执行并一直执行到完成或发生某事件而被阻塞放弃占用 CPU 时再重新调度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;高响应比优先 (HRRN) 调度算法：每次进行进程调度时，计算「响应比优先级」，把「响应比优先级」最高的进程投入运行，优先级 =(等待时间 + 要求服务时间)/ 要求服务时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;时间片轮转 (RR) 调度算法：时间片轮转调度是一种最古老，最简单，最公平且使用最广的算法，每个进程被分配一个时间段，称作它的时间片，即该进程允许运行的时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最高优先级调度 ： 为每个流程分配优先级，首先执行具有最高优先级的进程，依此类推。具有相同优先级的进程以 FCFS 方式执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多级反馈队列调度算法 ：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  	设置了多个队列，赋予每个队列不同的优先级，每个队列优先级从高到低，同时优先级越高时间片越短；
+
+  	新进程会被放入到第一级队列的末尾，按先来先服务排队等待被调度，如果在第一级队列规定的时间片没运行完成，则转入到第二级队列的末尾，以此类推，直至完成；
+
+  	当较高优先级的队列为空，调度较低优先级的队列中的进程运行。进程运行时，有新进程进入较高优先级的队列，停止当前运行的进程并移入到原队列末尾，让较高优先级的进程运行；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程通信&#34;&gt;#&lt;/a&gt; 进程通信&lt;/h2&gt;
+&lt;p&gt;匿名管道 (Pipes) ：用于具有亲缘关系的父子进程间或者兄弟进程之间的通信。&lt;/p&gt;
+&lt;p&gt;有名管道 (Named Pipes) : 匿名管道由于没有名字，只能用于亲缘关系的进程间通信。为了克服这个缺点，提出了有名管道。有名管道严格遵循先进先出 (first in first out)。有名管道以磁盘文件的方式存在，可以实现本机任意两个进程通信。&lt;/p&gt;
+&lt;p&gt;信号 (Signal) ：信号是一种比较复杂的通信方式，用于通知接收进程某个事件已经发生；&lt;/p&gt;
+&lt;p&gt;消息队列 (Message Queuing) ：消息队列是消息的链表，具有特定的格式，存放在内存中并由消息队列标识符标识。管道和消息队列的通信数据都是先进先出的原则。与管道不同的是消息队列存放在内核中，只有在内核重启或者显式地删除一个消息队列时，该消息队列才会被真正的删除。消息队列可以实现消息的随机查询，消息不一定要以先进先出的次序读取，也可以按消息的类型读取。比 FIFO 更有优势。消息队列克服了信号承载信息量少，管道只能承载无格式字 节流以及缓冲区大小受限等缺点。&lt;/p&gt;
+&lt;p&gt;信号量 (Semaphores) ：信号量是一个计数器，用于多进程对共享数据的访问，信号量的意图在于进程间同步。这种通信方式主要用于解决与同步相关的问题并避免竞争条件。&lt;/p&gt;
+&lt;p&gt;共享内存 (Shared memory) ：使得多个进程可以访问同一块内存空间，不同进程可以及时看到对方进程中对共享内存中数据的更新。这种方式需要依靠某种同步操作，如互斥锁和信号量等。可以说这是最有用的进程间通信方式。&lt;/p&gt;
+&lt;p&gt;套接字 (Sockets) : 此方法主要用于在客户端和服务器之间通过网络进行通信。套接字是支持 TCP/IP 的网络通信的基本操作单元，可以看做是不同主机之间的进程进行双向通信的端点，简单的说就是通信的两方的一种约定，用套接字中的相关函数来完成通信过程。&lt;/p&gt;
+&lt;h2 id=&#34;线程冲突&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#线程冲突&#34;&gt;#&lt;/a&gt; 线程冲突&lt;/h2&gt;
+&lt;p&gt;锁 解决互斥问题&lt;/p&gt;
+&lt;p&gt;信号量 解决互斥问题和同步问题&lt;/p&gt;
+&lt;h2 id=&#34;死锁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#死锁&#34;&gt;#&lt;/a&gt; 死锁&lt;/h2&gt;
+&lt;h3 id=&#34;产生条件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#产生条件&#34;&gt;#&lt;/a&gt; 产生条件&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;互斥&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;持有并等待&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不可剥夺&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;循环等待&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;解决方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方式&#34;&gt;#&lt;/a&gt; 解决方式&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;预防：有序分配，静态分配&lt;/p&gt;
+&lt;p&gt;避免：银行家算法&lt;/p&gt;
+&lt;p&gt;检测：进程 - 资源分配图&lt;/p&gt;
+&lt;p&gt;解除：杀死进程，抢占资源&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;文件系统&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件系统&#34;&gt;#&lt;/a&gt; 文件系统&lt;/h1&gt;
+&lt;h2 id=&#34;基本组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本组成&#34;&gt;#&lt;/a&gt; 基本组成&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;69da5b519dab3f692378d7e11e9dfee2.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;bdffa32e767fdc739256a54c0550a126.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;超级块，用来存储文件系统的详细信息，比如块个数、块大小、空闲块等等&lt;/li&gt;
+&lt;li&gt;索引节点区，用来存储索引节点&lt;/li&gt;
+&lt;li&gt;数据块区，用来存储文件或目录数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件存储&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件存储&#34;&gt;#&lt;/a&gt; 文件存储&lt;/h2&gt;
+&lt;h3 id=&#34;索引方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#索引方式&#34;&gt;#&lt;/a&gt; 索引方式&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;237d55c9ee85ea7f67c25d894d6053ec.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;br/&amp;gt;&lt;/p&gt;
+&lt;h3 id=&#34;存储结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#存储结构&#34;&gt;#&lt;/a&gt; 存储结构&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;3112dbef2261170eb9ea93d8917268bc.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;超级块，包含的是文件系统的重要信息，比如 inode 总个数、块总个数、每个块组的 inode 个数、每个块组的块个数等等&lt;/li&gt;
+&lt;li&gt;块组描述符，包含文件系统中各个块组的状态，比如块组中空闲块和 inode 的数目等，每个块组都包含了文件系统中「所有块组的组描述符信息」&lt;/li&gt;
+&lt;li&gt;数据位图和 inode 位图， 用于表示对应的数据块或 inode 是空闲的，还是被使用中。&lt;br /&gt;
+inode 列表，包含了块组中所有的 inode，inode 用于保存文件系统中与各个文件和目录相关的所有元数据&lt;/li&gt;
+&lt;li&gt;数据块，包含文件的有用数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件io&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件io&#34;&gt;#&lt;/a&gt; 文件 IO&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;64149890e7d2352e9c6d00296ff1f94c.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I/O 分为两个过程的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;数据准备的过程&lt;br /&gt;
+数据从内核空间拷贝到用户进程缓冲区的过程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;阻塞 I/O 阻塞在「过程 1 」和「过程 2」&lt;/p&gt;
+&lt;p&gt;非阻塞 I/O 和基于非阻塞 I/O 的多路复用阻塞在「过程 2」&lt;/p&gt;
+&lt;p&gt;异步 I/O 在「过程 1 」和「过程 2 」都不会阻塞&lt;/p&gt;
+&lt;h1 id=&#34;网络系统&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络系统&#34;&gt;#&lt;/a&gt; 网络系统&lt;/h1&gt;
+&lt;h2 id=&#34;网络传输&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络传输&#34;&gt;#&lt;/a&gt; 网络传输&lt;/h2&gt;
+&lt;h3 id=&#34;传统拷贝&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#传统拷贝&#34;&gt;#&lt;/a&gt; 传统拷贝&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;9fb013bdbbf80a5259c47035f172f860.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;零拷贝&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#零拷贝&#34;&gt;#&lt;/a&gt; 零拷贝&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;182081744abce78af7b790e71a1566e7.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;零拷贝（Zero-copy）技术，因为我们没有在内存层面去拷贝数据，也就是说全程没有通过 CPU 来搬运数据，所有的数据都是通过 DMA 来进行传输的。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;6738a5b5d1756b5272b416be3c131dec.png&#34; alt=&#34;1683564006371.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;io多路复用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#io多路复用&#34;&gt;#&lt;/a&gt; IO 多路复用&lt;/h2&gt;
+&lt;h3 id=&#34;selectpoll&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#selectpoll&#34;&gt;#&lt;/a&gt; select/poll&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;已连接的 Socket 都放到一个文件描述符集合，调用 select 函数将文件描述符集合拷贝到内核&lt;/li&gt;
+&lt;li&gt;内核遍历文件描述符集合，当检查到有事件产生后，将此 Socket 标记为可读或可写，再把整个文件描述符集合拷贝回用户态&lt;/li&gt;
+&lt;li&gt;用户态通过遍历的方法找到可读或可写的 Socket，然后处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;epoll&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#epoll&#34;&gt;#&lt;/a&gt; epoll&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;4ed8729089682ebeb559a10533479965.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;使用事件驱动机制，内核维护了一个链表记录就绪事件，当某个 socket 有事件发生时，通过回调函数内核会将其加入到这个就绪事件列表中，用户调用 epoll_wait () 函数时，返回有事件发生的文件描述符的个数&lt;/p&gt;
+&lt;h2 id=&#34;网络模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络模式&#34;&gt;#&lt;/a&gt; 网络模式&lt;/h2&gt;
+&lt;h3 id=&#34;reactor&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#reactor&#34;&gt;#&lt;/a&gt; Reactor&lt;/h3&gt;
+&lt;p&gt;单 Reactor 单进程&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;21557e97899912aa1be0df34980f6462.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;单 Reactor 多进程&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;65da303e36f2083abeb41b9064799cb6.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;多 Reactor 多进程&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;39835bde9e939b9f917d9c6175b2e072.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;proactor&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#proactor&#34;&gt;#&lt;/a&gt; Proactor&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;0a3c51901c46b3bc804d3e784a5009ce.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Proactor Initiator 负责创建 Proactor 和 Handler 对象，并将 Proactor 和 Handler 都通过 Asynchronous Operation Processor 注册到内核；&lt;/li&gt;
+&lt;li&gt;Asynchronous Operation Processor 负责处理注册请求，并处理 I/O 操作；&lt;/li&gt;
+&lt;li&gt;Asynchronous Operation Processor 完成 I/O 操作后通知 Proactor；&lt;/li&gt;
+&lt;li&gt;Proactor 根据不同的事件类型回调不同的 Handler 进行业务处理；&lt;/li&gt;
+&lt;li&gt;Handler 完成业务处理；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;一致性哈希&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一致性哈希&#34;&gt;#&lt;/a&gt; 一致性哈希&lt;/h2&gt;
+&lt;p&gt;一致哈希算法是对 2^32 进行取模运算，是一个固定的值，将「存储节点」和「数据」都映射到一个首尾相连的哈希环上。&lt;/p&gt;
+&lt;p&gt;映射的结果值往顺时针的方向的找到第一个节点，就是存储该数据的节点&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;960b4f5bfc7247a7aa2849de9798aead.png&#34; alt=&#34;截图&#34; /&gt;在一致哈希算法中，如果增加或者移除一个节点，仅影响该节点在哈希环上顺时针相邻的后继节点，其它数据也不会受到影响。&lt;/p&gt;
+&lt;p&gt;一致性哈希算法虽然减少了数据迁移量，但是存在节点分布不均匀的问题&lt;/p&gt;
+&lt;h3 id=&#34;采用虚拟节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#采用虚拟节点&#34;&gt;#&lt;/a&gt; 采用虚拟节点&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;ad77d7fcc911bb082f2aacca8ee95a7a.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;当节点变化时，会有不同的节点共同分担系统的变化，因此稳定性更高&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://lovearrowshoot.github.io/CS/CN/</guid>
+            <title>计算机网络</title>
+            <link>http://lovearrowshoot.github.io/CS/CN/</link>
+            <category term="CS" scheme="http://lovearrowshoot.github.io/categories/CS/" />
+            <category term="CS" scheme="http://lovearrowshoot.github.io/tags/CS/" />
+            <pubDate>Fri, 30 Jun 2023 10:28:44 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;概览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概览&#34;&gt;#&lt;/a&gt; 概览&lt;/h1&gt;
+&lt;h2 id=&#34;osi七层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#osi七层&#34;&gt;#&lt;/a&gt; OSI 七层&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;e5cc2ec24c7c16a6cfc681a74397658d.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tcpip四层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcpip四层&#34;&gt;#&lt;/a&gt; TCP/IP 四层&lt;/h2&gt;
+&lt;p&gt;&amp;lt;br/&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;a88a743fecfaba2c6b8d5572868ea7bf.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;f240919af7bce4548c7d26743d8d04a3.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;linux收发网络包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#linux收发网络包&#34;&gt;#&lt;/a&gt; Linux 收发网络包&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;9de0cde2635a37419b42d210d9e5ba9c.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;http&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http&#34;&gt;#&lt;/a&gt; HTTP&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;5a0a02eff508c20c0a9fcefadd8a639b.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;http和https&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http和https&#34;&gt;#&lt;/a&gt; HTTP 和 HTTPS&lt;/h2&gt;
+&lt;h3 id=&#34;建立连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#建立连接&#34;&gt;#&lt;/a&gt; 建立连接&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;5210623e21a7d19888e8ff1eb4d3a792.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安全性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安全性&#34;&gt;#&lt;/a&gt; 安全性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 由于是明文传输，所以安全上存在以下三个风险：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;窃听风险，比如通信链路上可以获取通信内容，用户号容易没。&lt;br /&gt;
+篡改风险，比如强制植入垃圾广告，视觉污染，用户眼容易瞎。&lt;br /&gt;
+冒充风险，比如冒充淘宝网站，用户钱容易没。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTPS 在 HTTP 与 TCP 层之间加入了 SSL/TLS 协议，很好的解决了上述的风险：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;信息加密：交互信息无法被窃取，但你的号会因为「自身忘记」账号而没。&lt;br /&gt;
+校验机制：无法篡改通信内容，篡改了就不能正常显示，&lt;br /&gt;
+身份证书：证明淘宝是真的淘宝网，但你的钱还是会因为「剁手」而没。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTPS 是如何解决上面的三个风险的？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;混合加密的方式实现信息的机密性，解决了窃听的风险。&lt;br /&gt;
+摘要算法的方式来实现完整性，它能够为数据生成独一无二的「指纹」，指纹用于校验数据的完整性，解决了篡改的风险。&lt;br /&gt;
+将服务器公钥放入到数字证书中，解决了冒充的风险。&lt;/p&gt;
+&lt;h2 id=&#34;http和rpc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http和rpc&#34;&gt;#&lt;/a&gt; HTTP 和 RPC&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;116c8594ad1a761c4cc4b3f05f5a479f.png&#34; alt=&#34;1680879022830.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;http和websocket&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http和websocket&#34;&gt;#&lt;/a&gt; HTTP 和 WebSocket&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;465a5c8838d49691d51aff84a273dbf3.png&#34; alt=&#34;1680881236879.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;tcp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp&#34;&gt;#&lt;/a&gt; TCP&lt;/h1&gt;
+&lt;h2 id=&#34;什么是-tcp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是-tcp&#34;&gt;#&lt;/a&gt; 什么是 TCP&lt;/h2&gt;
+&lt;p&gt;TCP 是面向连接的、可靠的、基于字节流的传输层通信协议。&lt;/p&gt;
+&lt;p&gt;面向连接：一定是「一对一」才能连接，不能像 UDP 协议可以一个主机同时向多个主机发送消息，也就是一对多是无法做到的；&lt;/p&gt;
+&lt;p&gt;可靠的：无论的网络链路中出现了怎样的链路变化，TCP 都可以保证一个报文一定能够到达接收端；&lt;/p&gt;
+&lt;p&gt;字节流：用户消息通过 TCP 协议传输时，消息可能会被操作系统「分组」成多个的 TCP 报文，如果接收方的程序如果不知道「消息的边界」，是无法读出一个有效的用户消息的。并且 TCP 报文是「有序的」，当「前一个」TCP 报文没有收到的时候，即使它先收到了后面的 TCP 报文，那么也不能扔给应用层去处理，同时对「重复」的 TCP 报文会自动丢弃。&lt;/p&gt;
+&lt;h2 id=&#34;tcp和udp区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp和udp区别&#34;&gt;#&lt;/a&gt; TCP 和 UDP 区别&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#连接&#34;&gt;#&lt;/a&gt; 连接&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TCP 是面向连接的传输层协议，传输数据前先要建立连接。&lt;/p&gt;
+&lt;p&gt;UDP 是不需要连接，即刻传输数据。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;服务对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务对象&#34;&gt;#&lt;/a&gt; 服务对象&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TCP 是一对一的两点服务，即一条连接只有两个端点。&lt;/p&gt;
+&lt;p&gt;UDP 支持一对一、一对多、多对多的交互通信&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;可靠性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可靠性&#34;&gt;#&lt;/a&gt; 可靠性&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TCP 是可靠交付数据的，数据可以无差错、不丢失、不重复、按序到达。&lt;/p&gt;
+&lt;p&gt;UDP 是尽最大努力交付，不保证可靠交付数据。但是我们可以基于 UDP 传输协议实现一个可靠的传输协议，比如 QUIC 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;拥塞控制-流量控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞控制-流量控制&#34;&gt;#&lt;/a&gt; 拥塞控制、流量控制&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TCP 有拥塞控制和流量控制机制，保证数据传输的安全性。&lt;/p&gt;
+&lt;p&gt;UDP 则没有，即使网络非常拥堵了，也不会影响 UDP 的发送速率。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;首部开销&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#首部开销&#34;&gt;#&lt;/a&gt; 首部开销&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TCP 首部长度较长，会有一定的开销，首部在没有使用「选项」字段时是 20 个字节，如果使用了「选项」字段则会变长的。&lt;/p&gt;
+&lt;p&gt;UDP 首部只有 8 个字节，并且是固定不变的，开销较小。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;传输方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#传输方式&#34;&gt;#&lt;/a&gt; 传输方式&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TCP 是流式传输，没有边界，但保证顺序和可靠。&lt;/p&gt;
+&lt;p&gt;UDP 是一个包一个包的发送，是有边界的，但可能会丢包和乱序。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;分片不同&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分片不同&#34;&gt;#&lt;/a&gt; 分片不同&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TCP 的数据大小如果大于 MSS 大小，则会在传输层进行分片，目标主机收到后，也同样在传输层组装 TCP 数据包，如果中途丢失了一个分片，只需要传输丢失的这个分片。&lt;br /&gt;
+UDP 的数据大小如果大于 MTU 大小，则会在 IP 层进行分片，目标主机收到后，在 IP 层组装完数据，接着再传给传输层。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;用途&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用途&#34;&gt;#&lt;/a&gt; 用途&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;UDP 一般用于即时通信，如：语音、 视频 、直播等。对传输数据的准确性要求不是特别高&lt;/p&gt;
+&lt;p&gt;TCP 用于对传输准确性要求特别高的场景，比如文件传输、发送和接收邮件、远程登录等&lt;/p&gt;
+&lt;h2 id=&#34;建立连接-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#建立连接-2&#34;&gt;#&lt;/a&gt; 建立连接&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;8c8703ca0b8e5d500cc1e6293d912dda.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;连接断开&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#连接断开&#34;&gt;#&lt;/a&gt; 连接断开&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;d1c4221d0e56d3e1ba738de31a19257e.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;流量控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流量控制&#34;&gt;#&lt;/a&gt; 流量控制&lt;/h2&gt;
+&lt;h3 id=&#34;窗口不变&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#窗口不变&#34;&gt;#&lt;/a&gt; 窗口不变&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;738efe449c4379dc691d23cdb2dbc3da.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;窗口收缩&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#窗口收缩&#34;&gt;#&lt;/a&gt; 窗口收缩&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;cbbd9e0fb129e5296244a0986a8377ec.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;拥塞控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞控制&#34;&gt;#&lt;/a&gt; 拥塞控制&lt;/h2&gt;
+&lt;h3 id=&#34;超时重传&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#超时重传&#34;&gt;#&lt;/a&gt; 超时重传&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;cbf8ac74aaf1cc37dcd1bd95bb114506.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;快速重传&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快速重传&#34;&gt;#&lt;/a&gt; 快速重传&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;拥塞窗口 cwnd = ssthresh + 3 （ 3 的意思是确认有 3 个数据包被收到了）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重传丢失的数据包；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果再收到重复的 ACK，那么 cwnd 增加 1；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果收到新数据的 ACK 后，把 cwnd 设置为第一步中的 ssthresh 的值，原因是该 ACK 确认了新的数据，说明从 duplicated ACK 时的数据都已收到，该恢复过程已经结束，可以回到恢复之前的状态了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;82403576c1b1de38b6c19a15555ea869.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;ip&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ip&#34;&gt;#&lt;/a&gt; IP&lt;/h1&gt;
+&lt;h2 id=&#34;ip地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ip地址&#34;&gt;#&lt;/a&gt; IP 地址&lt;/h2&gt;
+&lt;h3 id=&#34;地址分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#地址分类&#34;&gt;#&lt;/a&gt; 地址分类&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;ad4bf54e48d36971ce20b27cf41c3c25.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;ca4c77756f9b57e1862a5e697c394f82.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;路由控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由控制&#34;&gt;#&lt;/a&gt; 路由控制&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;775c122015479069e42fbba3db912303.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ip协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ip协议&#34;&gt;#&lt;/a&gt; IP 协议&lt;/h2&gt;
+&lt;h3 id=&#34;arp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#arp协议&#34;&gt;#&lt;/a&gt; ARP 协议&lt;/h3&gt;
+&lt;p&gt;在一个数据链路中通过 IP 地址获得其他设备的 MAC 地址&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;863159c1fbcd1aabf70e3a1e135a6360.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dhcp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dhcp协议&#34;&gt;#&lt;/a&gt; DHCP 协议&lt;/h3&gt;
+&lt;p&gt;在数据链路中实现统一分配和管理 IP 地址&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;8b9f2bbf860bbda43c0f8dfcbbe421a7.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;napt协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#napt协议&#34;&gt;#&lt;/a&gt; NAPT 协议&lt;/h3&gt;
+&lt;p&gt;将不同的私有 IP 地址转换为公有 IP 地址 + 端口号&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;82e271e03fb555a19ab029ef6b294dfb.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;icmp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#icmp协议&#34;&gt;#&lt;/a&gt; ICMP 协议&lt;/h3&gt;
+&lt;p&gt;确认 IP 包是否送达目标地址、报告发送过程 IP 包被废弃的原因和改善网络设置等&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;d1b6c1dff65f4f2c3a62342a831627dc.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;7c40e03f2c09fdef14b3e54783c8b541.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://lovearrowshoot.github.io/cpp/C++11%E7%89%B9%E8%89%B2/</guid>
             <title>C++11特色</title>
-            <link>http://example.com/2023/06/30/cpp/C++11%E7%89%B9%E8%89%B2/</link>
-            <category term="C++" scheme="http://example.com/categories/cpp/" />
-            <category term="C++" scheme="http://example.com/tags/C/" />
+            <link>http://lovearrowshoot.github.io/cpp/C++11%E7%89%B9%E8%89%B2/</link>
+            <category term="C++" scheme="http://lovearrowshoot.github.io/categories/cpp/" />
+            <category term="C++" scheme="http://lovearrowshoot.github.io/tags/C/" />
             <pubDate>Fri, 30 Jun 2023 00:07:23 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;右值引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#右值引用&#34;&gt;#&lt;/a&gt; 右值引用&lt;/h2&gt;
 &lt;h3 id=&#34;万能引用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#万能引用&#34;&gt;#&lt;/a&gt; 万能引用&lt;/h3&gt;
@@ -38,11 +487,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/04/30/Algorithms/ACM/</guid>
+            <guid isPermalink="true">http://lovearrowshoot.github.io/Algorithms/ACM/</guid>
             <title>ACM常用输入输出</title>
-            <link>http://example.com/2022/04/30/Algorithms/ACM/</link>
-            <category term="算法" scheme="http://example.com/categories/Algorithms/" />
-            <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/" />
+            <link>http://lovearrowshoot.github.io/Algorithms/ACM/</link>
+            <category term="算法" scheme="http://lovearrowshoot.github.io/categories/Algorithms/" />
+            <category term="算法" scheme="http://lovearrowshoot.github.io/tags/%E7%AE%97%E6%B3%95/" />
             <pubDate>Sat, 30 Apr 2022 20:46:25 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;构建链表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构建链表&#34;&gt;#&lt;/a&gt; 构建链表&lt;/h1&gt;
 &lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ListNode&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; val&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;span class=&#34;token comment&#34;&gt;// 节点值&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ListNode&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; next&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;// 下一个节点&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;ListNode&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;nullptr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;// 构造函数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;ListNode&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; n&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; ListNode&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; next&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;next&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ListNode&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getListNodemy&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;vector&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;str&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ListNode&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; dumyHead &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;ListNode&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ListNode&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; ptr &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; dumyHead&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; nums &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; str&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        dumyHead&lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt;next &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;ListNode&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;str&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        dumyHead &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; dumyHead&lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt;next&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; ptr&lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt;next&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;构建二叉树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构建二叉树&#34;&gt;#&lt;/a&gt; 构建二叉树&lt;/h1&gt;
@@ -50,11 +499,11 @@
 &lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cin&lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/04/30/Algorithms/%E7%AE%97%E6%B3%95/</guid>
+            <guid isPermalink="true">http://lovearrowshoot.github.io/Algorithms/%E7%AE%97%E6%B3%95/</guid>
             <title>常见算法</title>
-            <link>http://example.com/2022/04/30/Algorithms/%E7%AE%97%E6%B3%95/</link>
-            <category term="算法" scheme="http://example.com/categories/Algorithms/" />
-            <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/" />
+            <link>http://lovearrowshoot.github.io/Algorithms/%E7%AE%97%E6%B3%95/</link>
+            <category term="算法" scheme="http://lovearrowshoot.github.io/categories/Algorithms/" />
+            <category term="算法" scheme="http://lovearrowshoot.github.io/tags/%E7%AE%97%E6%B3%95/" />
             <pubDate>Sat, 30 Apr 2022 20:46:25 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;排序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#排序&#34;&gt;#&lt;/a&gt; 排序&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;adbbe4d16bfa571d144a00d4468b9c7d.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
