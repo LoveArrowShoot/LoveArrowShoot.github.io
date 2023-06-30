@@ -8,10 +8,212 @@
     <author>
       <name>Umi</name>
     </author>
-    <updated>2023-06-30T02:29:20.000Z</updated>
+    <updated>2023-06-30T02:52:26.000Z</updated>
     <category term="umi" />
     <category term="C++" />
     <category term="CS" />
+    <entry>
+        <id>http://lovearrowshoot.github.io/DB/Redis/</id>
+        <title>Redis</title>
+        <link rel="alternate" href="http://lovearrowshoot.github.io/DB/Redis/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;825ba3a657ba7f5825b07af0a36465b6.png&#34; alt=&#34;1679488520956.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;数据结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据结构&#34;&gt;#&lt;/a&gt; 数据结构&lt;/h1&gt;
+&lt;h2 id=&#34;数据库实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库实现&#34;&gt;#&lt;/a&gt; 数据库实现&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;686ecfa51d22947db60c9898b4adf078.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;728f7ff443ca8f9e61ce181ccf5de051.png&#34; alt=&#34;1679661996056.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据类型&#34;&gt;#&lt;/a&gt; 数据类型&lt;/h2&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;13eda52ea8480718461a53c17978a17b.png&amp;quot; alt=&amp;quot;截图&amp;quot; style=&amp;quot;zoom:100%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;83d8f29b2937acc56c6ab1c37856ab62.png&#34; alt=&#34;1679487343639.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;fdd0602a7d6f49a807a60f2c44b07e94.png&amp;quot; alt=&amp;quot;1679487357432.png&amp;quot; style=&amp;quot;zoom:100%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;h2 id=&#34;实现方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实现方式&#34;&gt;#&lt;/a&gt; 实现方式&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;0079cd6449b87b6f414ee1173a9e0291.png&#34; alt=&#34;1679487482138.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;9dd848962acd7b4e4a2df2a723473855.png&#34; alt=&#34;1679487488953.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;c9f6835769a9acfe8f3371d6849de610.png&#34; alt=&#34;1679487497008.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;149da92d094905304239dd8963a6f926.png&#34; alt=&#34;1679487502787.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;a15ab46d398da94c1b222a2ea314a80a.png&#34; alt=&#34;1679487509515.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;线程模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#线程模型&#34;&gt;#&lt;/a&gt; 线程模型&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;f3b7de55f4a88dda3ef871ad2e50ce98.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;e0bea70f14513b8ddee424588652920d.png&#34; alt=&#34;1679488226295.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;持久化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#持久化&#34;&gt;#&lt;/a&gt; 持久化&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;1abaf95dc6afeb244ff0ffe28ae37890.png&#34; alt=&#34;1679488357946.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;写时复制技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写时复制技术&#34;&gt;#&lt;/a&gt; 写时复制技术&lt;/h2&gt;
+&lt;p&gt;子进程和父进程共享同一片内存数据，只有在发生修改内存数据的情况下，物理内存才会被复制一份&lt;/p&gt;
+&lt;h2 id=&#34;aof日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#aof日志&#34;&gt;#&lt;/a&gt; AOF 日志&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;de793bf932bdb637805e16eca9f2c6f8.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;573f3c50eed0e5f47a2eadb7ac9ac97a.png&#34; alt=&#34;1679488727700.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;写入aof日志过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写入aof日志过程&#34;&gt;#&lt;/a&gt; 写入 AOF 日志过程&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;2030551fdaf7d390c8adc7acc4e8abf4.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;e42c794ab68937c8c57309156fb0c917.png&#34; alt=&#34;1679488798408.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;aof重写机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#aof重写机制&#34;&gt;#&lt;/a&gt; AOF 重写机制&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;AOF 重写机制是在重写时，读取当前数据库中的所有键值对，然后将每一个键值对用一条命令记录到「新的 AOF 文件」，等到全部记录完后，就将新的 AOF 文件替换掉现有的 AOF 文件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;82767ad9ec8bd4fb212a1ed424a9bfe8.png&#34; alt=&#34;1679489052033.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;重写时执行命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#重写时执行命令&#34;&gt;#&lt;/a&gt; 重写时执行命令&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;371ef5231c4ce97097e42c619ca65f66.png&#34; alt=&#34;1679489090923.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rdb快照&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rdb快照&#34;&gt;#&lt;/a&gt; RDB 快照&lt;/h2&gt;
+&lt;p&gt;RDB 快照就是记录某一个瞬间的内存数据，记录的是实际二进制数据，&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;6cd9296a53d04a171cf83c4909dc176a.png&#34; alt=&#34;1679489638723.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;混合持久化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#混合持久化&#34;&gt;#&lt;/a&gt; 混合持久化&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;690ab4f4cbc21ebbf99f0c774024ab2a.png&#34; alt=&#34;1679489747562.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;aa67657567e7d67ff63d3f97a2dfe82e.png&#34; alt=&#34;1679489755306.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;大key对持久化的影响&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#大key对持久化的影响&#34;&gt;#&lt;/a&gt; 大 key 对持久化的影响&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;c889d9e9592fc89f3b248181927a535d.png&#34; alt=&#34;1679489924511.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#集群&#34;&gt;#&lt;/a&gt; 集群&lt;/h1&gt;
+&lt;h2 id=&#34;主从复制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主从复制&#34;&gt;#&lt;/a&gt; 主从复制&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;12f645507c65e2e3992838037be422b4.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第一次同步&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一次同步&#34;&gt;#&lt;/a&gt; 第一次同步&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;5682a4a31df2d5ddfa614b43791d4cb4.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;76a4e756ce65bc5120db940393265d02.png&#34; alt=&#34;1679494144033.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;增量复制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#增量复制&#34;&gt;#&lt;/a&gt; 增量复制&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;20b75507ad0eae08c3f2c6ebeaee7659.png&#34; alt=&#34;1679493989309.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;57728dc099d9e8e160b2b5f47eeb3b6c.png&#34; alt=&#34;1679494012272.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;214349511394b7b6ef4d6d728e8bb56e.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;哨兵模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#哨兵模式&#34;&gt;#&lt;/a&gt; 哨兵模式&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;2a8b5911aac15c262bd8f31a52c1543f.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;哨兵节点通过 Redis 的发布者 / 订阅者机制，哨兵之间相互感知，相互连接，然后组成哨兵集群&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;2d1c776baa67c3cf5fa7e67bc1f9d9d5.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;哨兵通过 INFO 命令，在主节点获得所有从节点连接信息，于是和从节点建立连接，进行监控&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;0ac671e3d82cdcd20d4faeff09c9a1f5.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;855c8486be0e3b69ede458bf12353aa6.png&#34; alt=&#34;1679495012992.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;切片集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#切片集群&#34;&gt;#&lt;/a&gt; 切片集群&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;9d1cdb313d8c541321571c66237afa76.png&#34; alt=&#34;1679495285931.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;脑裂问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#脑裂问题&#34;&gt;#&lt;/a&gt; 脑裂问题&lt;/h2&gt;
+&lt;p&gt;由于网络问题，集群节点之间失去联系。主从数据不同步；重新平衡选举，产生两个主服务。等网络恢复，旧主节点降级为从节点，与新主节点进行同步复制时，从节点会清空自己的缓冲区，导致之前客户端写入的数据丢失&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;b902aeee28d3e6c7527691d563bce320.png&#34; alt=&#34;1679495437754.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;过期删除&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#过期删除&#34;&gt;#&lt;/a&gt; 过期删除&lt;/h1&gt;
+&lt;h2 id=&#34;惰性删除策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#惰性删除策略&#34;&gt;#&lt;/a&gt; 惰性删除策略&lt;/h2&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;7399848c8a224bf07e0c546aba1c1229.png&amp;quot; alt=&amp;quot;截图&amp;quot; style=&amp;quot;zoom:50%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;367168f039da3aede7c05c379fff8b37.png&#34; alt=&#34;1679495892068.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;定期删除策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定期删除策略&#34;&gt;#&lt;/a&gt; 定期删除策略&lt;/h2&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;edc8d9f19ec20d29522cd084af37113c.png&amp;quot; alt=&amp;quot;截图&amp;quot; style=&amp;quot;zoom:50%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;0346774ba07a72596f7cf7e6d12430d2.png&#34; alt=&#34;1679495958651.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;内存淘汰&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内存淘汰&#34;&gt;#&lt;/a&gt; 内存淘汰&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;912c6204df7915e4f49ead1ca2741dfc.png&#34; alt=&#34;1679496284924.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;缓存设计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缓存设计&#34;&gt;#&lt;/a&gt; 缓存设计&lt;/h1&gt;
+&lt;h2 id=&#34;缓存异常&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缓存异常&#34;&gt;#&lt;/a&gt; 缓存异常&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;09109217d4890b45654499ceffdbafac.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;缓存更新策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缓存更新策略&#34;&gt;#&lt;/a&gt; 缓存更新策略&lt;/h2&gt;
+&lt;h3 id=&#34;cache-aside旁路缓存策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache-aside旁路缓存策略&#34;&gt;#&lt;/a&gt; Cache Aside（旁路缓存）策略&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;372976721038e0deef9df930e8b2dca8.png&#34; alt=&#34;1679497096796.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;readwrite-through读穿-写穿策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#readwrite-through读穿-写穿策略&#34;&gt;#&lt;/a&gt; Read/Write Through（读穿 / 写穿）策略&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;b011ad617b75120ba15751dc48e59823.png&#34; alt=&#34;1679497145491.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;write-back写回策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#write-back写回策略&#34;&gt;#&lt;/a&gt; Write Back（写回）策略&lt;/h3&gt;
+&lt;p&gt;Write Back（写回）策略在更新数据的时候，只更新缓存，同时将缓存数据设置为脏的，然后立马返回，并不会更新数据库。对于数据库的更新，会通过批量异步更新的方式进行。&lt;/p&gt;
+&lt;h1 id=&#34;实战&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实战&#34;&gt;#&lt;/a&gt; 实战&lt;/h1&gt;
+&lt;h2 id=&#34;延迟队列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#延迟队列&#34;&gt;#&lt;/a&gt; 延迟队列&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;aa675444152110a9ba40f6d7cc4881f6.png&#34; alt=&#34;1679497724285.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;大key&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#大key&#34;&gt;#&lt;/a&gt; 大 key&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;59c940711397093127f2946128773dee.png&#34; alt=&#34;1679497772024.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;113fd792313ad459ecb33729dc543dbb.png&#34; alt=&#34;1679497761676.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;56aa9c33087651667d1af148afddf62d.png&#34; alt=&#34;1679498014361.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;管道&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#管道&#34;&gt;#&lt;/a&gt; 管道&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;60b19c6e007456b9ff59efb2c2b426f2.png&#34; alt=&#34;1679497824619.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;分布式锁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分布式锁&#34;&gt;#&lt;/a&gt; 分布式锁&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;dc6382ec9d83edfe9284b5173033fda2.png&#34; alt=&#34;1679497956443.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;8744e43874f1bffd701ed17d88f533e8.png&#34; alt=&#34;1679497900935.png&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="数据库" scheme="http://lovearrowshoot.github.io/categories/DB/" />
+        <category term="数据库" scheme="http://lovearrowshoot.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+        <updated>2023-06-30T02:52:26.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://lovearrowshoot.github.io/DB/MySQL/</id>
+        <title>MySQL</title>
+        <link rel="alternate" href="http://lovearrowshoot.github.io/DB/MySQL/"/>
+        <content type="html">&lt;h1 id=&#34;基础&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基础&#34;&gt;#&lt;/a&gt; 基础&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;55a48173db0950001d1d370beb14225b.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;buffer-pool&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#buffer-pool&#34;&gt;#&lt;/a&gt; Buffer Pool&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;bbac63c6804489096455da38f4ae60ac.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;索引&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#索引&#34;&gt;#&lt;/a&gt; 索引&lt;/h1&gt;
+&lt;h2 id=&#34;分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类&#34;&gt;#&lt;/a&gt; 分类&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;7f50e1376fd8e70540ae7bcd2fb1a01d.png&#34; alt=&#34;1679296020905.png&#34; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;联合索引的最左匹配原则，在遇到范围查询（如 &amp;gt;、&amp;lt;）的时候，就会停止匹配，也就是范围查询的字段可以用到联合索引，但是在范围查询字段的后面的字段无法用到联合索引&lt;/p&gt;
+&lt;p&gt;注意，对于 &amp;gt;=、&amp;lt;=、BETWEEN、like 前缀匹配的范围查询，并不会停止匹配&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;ebcda5575ac5dca3e3e418d1d4735ce1.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;事务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事务&#34;&gt;#&lt;/a&gt; 事务&lt;/h1&gt;
+&lt;h2 id=&#34;特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特性&#34;&gt;#&lt;/a&gt; 特性&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;62cb96138c83780bf39a4df60a06abd3.png&#34; alt=&#34;1679365898087.png&#34; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;脏读：读到其他事务未提交的数据&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不可重复读：前后读取的数据不一致&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;幻读：前后读取的记录数量不一致&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;隔离级别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隔离级别&#34;&gt;#&lt;/a&gt; 隔离级别&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;a7f199cfa7c9f49f451834f6d12c8a2b.png&#34; alt=&#34;1679366412309.png&#34; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;「读提交」和「可重复读」隔离级别的事务通过 Read View 实现&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;「读提交」隔离级别是在「每个语句执行前」都会重新生成一个 Read View&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;「可重复读」隔离级别是「启动事务时」生成 Read View，整个事务期间都用该 Read View&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;read-view&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#read-view&#34;&gt;#&lt;/a&gt; Read View&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;9784835218f9efe79c7360ab92ba868c.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;98df64e4e9290a2b2b7027f2d5cbb7f9.png&#34; alt=&#34;1679378272345.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;锁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#锁&#34;&gt;#&lt;/a&gt; 锁&lt;/h1&gt;
+&lt;h2 id=&#34;种类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#种类&#34;&gt;#&lt;/a&gt; 种类&lt;/h2&gt;
+&lt;h3 id=&#34;全局锁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全局锁&#34;&gt;#&lt;/a&gt; 全局锁&lt;/h3&gt;
+&lt;p&gt;执行后，数据库处于只读状态，用于做全库逻辑备份&lt;/p&gt;
+&lt;h3 id=&#34;表级锁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#表级锁&#34;&gt;#&lt;/a&gt; 表级锁&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;表锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对整张表加读锁或写锁&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元数据锁 MDL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对表进行 CRUD 时，加 MDL 读锁&lt;/p&gt;
+&lt;p&gt;对表进行结构变更时，加 MDL 写锁&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;意向锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;意向共享锁和意向独占锁是表级锁，不会和行级的共享锁和独占锁发生冲突，而且意向锁之间不会发生冲突，只和表锁发生冲突。&lt;/p&gt;
+&lt;p&gt;意向锁的目的是为了快速判断表里是否有记录被加锁&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AUTO-INC 锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用于给设置为自增的主键赋值，阻塞其他事务对该表的插入操作&lt;/p&gt;
+&lt;h3 id=&#34;行级锁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#行级锁&#34;&gt;#&lt;/a&gt; 行级锁&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Record Lock&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;记录锁，也就是仅仅把一条记录锁上&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gap Lock&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;间隙锁，锁定一个范围，但是不包含记录本身&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next-Key Lock&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;锁定一个范围，并且锁定记录本身&lt;/p&gt;
+&lt;h3 id=&#34;插入意向锁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#插入意向锁&#34;&gt;#&lt;/a&gt; 插入意向锁&lt;/h3&gt;
+&lt;p&gt;表明有事务想在某个区间插入新记录，但是该区间被加了间隙锁，现在处于等待状态&lt;/p&gt;
+&lt;h2 id=&#34;加锁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加锁&#34;&gt;#&lt;/a&gt; 加锁&lt;/h2&gt;
+&lt;h3 id=&#34;唯一索引等值查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#唯一索引等值查询&#34;&gt;#&lt;/a&gt; 唯一索引等值查询&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;da76468a203e616d561387378c4c84aa.png&#34; alt=&#34;1679417052733.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;唯一索引范围查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#唯一索引范围查询&#34;&gt;#&lt;/a&gt; 唯一索引范围查询&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;46e512c338d26ebd7e3a9cf4b825b85f.png&#34; alt=&#34;1679417038825.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;非唯一索引等值查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#非唯一索引等值查询&#34;&gt;#&lt;/a&gt; 非唯一索引等值查询&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;55876725c404978a52a0ed8257d88654.png&#34; alt=&#34;1679417286688.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;非唯一索引范围查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#非唯一索引范围查询&#34;&gt;#&lt;/a&gt; 非唯一索引范围查询&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;3009e2dba128aae74cce14622968e8d6.png&#34; alt=&#34;1679417346852.png&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h1&gt;
+&lt;h2 id=&#34;undo-log&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#undo-log&#34;&gt;#&lt;/a&gt; undo log&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;3801a0f1b656172e31a6dfa6f4744dfc.png&#34; alt=&#34;1679462627466.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;redo-log&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#redo-log&#34;&gt;#&lt;/a&gt; redo log&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;90a227c9aa98575280c2dcfc973c30bb.png&#34; alt=&#34;1679462666754(1).png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;主从复制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主从复制&#34;&gt;#&lt;/a&gt; 主从复制&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;268b99ee339b6805c415b7f5775c7123.png&#34; alt=&#34;截图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;e81169ea6b84b9e0aeff67219a9d23ba.png&#34; alt=&#34;1679462711479.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;两阶段提交&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#两阶段提交&#34;&gt;#&lt;/a&gt; 两阶段提交&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;716947f47edfd2beaab237d9d353c94e.png&#34; alt=&#34;1679463399225.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;更新记录流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更新记录流程&#34;&gt;#&lt;/a&gt; 更新记录流程&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;4a2c6b8526d36de822993c3e79b13c85.png&#34; alt=&#34;1679463790086.png&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="数据库" scheme="http://lovearrowshoot.github.io/categories/DB/" />
+        <category term="数据库" scheme="http://lovearrowshoot.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+        <updated>2023-06-30T02:52:10.000Z</updated>
+    </entry>
     <entry>
         <id>http://lovearrowshoot.github.io/CS/OS/</id>
         <title>操作系统</title>
