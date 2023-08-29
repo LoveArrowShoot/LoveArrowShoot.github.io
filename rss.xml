@@ -1197,7 +1197,7 @@ UDP 的数据大小如果大于 MTU 大小，则会在 IP 层进行分片，目�
             <guid isPermalink="true">http://lovearrowshoot.github.io/Algorithms/ACM/</guid>
             <title>ACM常用输入输出</title>
             <link>http://lovearrowshoot.github.io/Algorithms/ACM/</link>
-            <category term="算法" scheme="http://lovearrowshoot.github.io/categories/%E7%AE%97%E6%B3%95/" />
+            <category term="算法" scheme="http://lovearrowshoot.github.io/categories/Algorithms/" />
             <category term="算法" scheme="http://lovearrowshoot.github.io/tags/%E7%AE%97%E6%B3%95/" />
             <pubDate>Sat, 30 Apr 2022 20:46:25 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;构建链表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构建链表&#34;&gt;#&lt;/a&gt; 构建链表&lt;/h1&gt;
@@ -1209,7 +1209,7 @@ UDP 的数据大小如果大于 MTU 大小，则会在 IP 层进行分片，目�
             <guid isPermalink="true">http://lovearrowshoot.github.io/Algorithms/%E7%AE%97%E6%B3%95/</guid>
             <title>常见算法</title>
             <link>http://lovearrowshoot.github.io/Algorithms/%E7%AE%97%E6%B3%95/</link>
-            <category term="算法" scheme="http://lovearrowshoot.github.io/categories/%E7%AE%97%E6%B3%95/" />
+            <category term="算法" scheme="http://lovearrowshoot.github.io/categories/Algorithms/" />
             <category term="算法" scheme="http://lovearrowshoot.github.io/tags/%E7%AE%97%E6%B3%95/" />
             <pubDate>Sat, 30 Apr 2022 20:46:25 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;排序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#排序&#34;&gt;#&lt;/a&gt; 排序&lt;/h1&gt;
